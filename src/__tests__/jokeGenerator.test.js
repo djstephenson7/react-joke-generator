@@ -12,3 +12,8 @@ test("Joke component receives props and then renders text", () => {
     "The funniest joke this year."
   );
 });
+
+test("Joke generator fetches a random joke and renders it", () => {
+  const { getByText } = render(<JokeGenerator />);
+  expect(getByText("You haven't loaded any joke yet!")).toBeInTheDOM();
+})
