@@ -1,9 +1,17 @@
 import React from 'react';
 
 export default class JokeGenerator extends React.Component {
+  state = {
+    joke: null
+  };
+
   render() {
-    return <div>
-    <h1>You haven't loaded any joke yet!</h1>
-    </div>
+    const { joke } = this.state;
+
+    return (
+    <React.Fragment>
+      {!joke && <div>You haven't loaded any joke yet!</div>}
+    </React.Fragment>
+    );
   }
 }
