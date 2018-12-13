@@ -26,13 +26,13 @@ test("Joke generator fetches a random joke and renders it", () => {
     }
   });
 
-  const { getByText, queryByText } = render(<JokeGenerator />);
+  const { getByText, queryByText, queryByTestId } = render(<JokeGenerator />);
   expect(getByText("You haven't loaded any joke yet!")).toBeInTheDocument();
 
   fireEvent.click(getByText("Load a random joke."));
   expect(queryByText("You haven't loaded any joke yet!")).not.toBeInTheDocument();
   expect(queryByText("Loading...")).toBeInTheDocument();
 
-  await wait(() => expect(queryByText("Loading...")).not.toBeInTheDocument());
+  async() => await wait(() => expect(queryByText("Loading...")).not.toBeInTheDocument());
   expect(queryByTestId("joke-text")).toBeInTheDocument();
 })
