@@ -19,7 +19,7 @@ test("Joke component receives props and then renders text", () => {
   );
 });
 
-test("Joke generator fetches a random joke and renders it", () => {
+test("Joke generator fetches a random joke and renders it", async  () => {
   mock.onGet().replyOnce(200, {
     value: {
       joke: "Really funny joke!"
@@ -33,6 +33,6 @@ test("Joke generator fetches a random joke and renders it", () => {
   expect(queryByText("You haven't loaded any joke yet!")).not.toBeInTheDocument();
   expect(queryByText("Loading...")).toBeInTheDocument();
 
-  async() => await wait(() => expect(queryByText("Loading...")).not.toBeInTheDocument());
+  await wait(() => expect(queryByText("Loading...")).not.toBeInTheDocument());
   expect(queryByTestId("joke-text")).toBeInTheDocument();
 })
