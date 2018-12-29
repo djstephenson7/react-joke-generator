@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class JokesController < ApplicationController
-      before_action :set_joke, only: [:show, :update, :destroy]
+      before_action :set_joke, only: %i[show update destroy]
 
       # GET /jokes
       def index
@@ -41,15 +43,16 @@ module Api
       end
 
       private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_joke
-          @joke = Joke.find(params[:id])
-        end
 
-        # Only allow a trusted parameter "white list" through.
-        def joke_params
-          params.require(:joke).permit(:joke)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_joke
+        @joke = Joke.find(params[:id])
+      end
+
+      # Only allow a trusted parameter "white list" through.
+      def joke_params
+        params.require(:joke).permit(:joke)
+      end
     end
   end
 end
