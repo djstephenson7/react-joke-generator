@@ -14,7 +14,17 @@ module Api
 
       # GET /jokes/1
       def show
-        render json: @joke
+        # render json: @joke
+        @joke = Joke.all.sample
+        joke = {
+                "type": "success",
+                "value": {
+                  "categories": [],
+                  "id": @joke.id,
+                  "joke": @joke.joke
+                }
+              }
+        render json: joke
       end
 
       # POST /jokes
