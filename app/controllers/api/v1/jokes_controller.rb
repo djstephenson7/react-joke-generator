@@ -15,13 +15,13 @@ module Api
       # GET /jokes/1
       def show
         # render json: @joke
-        @joke = Joke.all.sample
+        @joke = Joke.all
         joke = {
                 "type": "success",
                 "value": {
-                  "categories": [],
-                  "id": @joke.id,
-                  "joke": @joke.joke
+                  "id": @joke[0].id,
+                  "joke": @joke[0].joke,
+                  "categories": []
                 }
               }
         render json: joke
