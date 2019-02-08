@@ -15,7 +15,7 @@ export default class JokeGenerator extends React.Component {
     // console.log({ data: { value: { joke: { joke } } } })
     //
 
-    axios.get("http://localhost:3001/api/v1/jokes/6")
+    axios.get("http://localhost:3001/api/v1/jrandom")
       .then(result => {
         const joke = result.data.value.joke
         this.setState({ loading: false, joke });

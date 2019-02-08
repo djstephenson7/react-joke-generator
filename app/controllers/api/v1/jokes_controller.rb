@@ -12,6 +12,23 @@ module Api
         render json: @jokes
       end
 
+      def show_random
+        jokes_length = Joke.all.length
+        joke_no = rand(0..jokes_length)
+        @joke = Joke.all
+        joke = {
+                "type": "success",
+                "value": {
+                  "id": @joke[joke_no].id,
+                  "joke": @joke[joke_no].joke,
+                  "categories": []
+                }
+              }
+              puts joke
+              # puts @joke
+        render json: joke
+      end
+
       # GET /jokes/1
       def show
         puts params[:id]
