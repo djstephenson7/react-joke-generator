@@ -14,16 +14,19 @@ module Api
 
       # GET /jokes/1
       def show
+        puts params[:id]
         # render json: @joke
         @joke = Joke.all
         joke = {
                 "type": "success",
                 "value": {
-                  "id": @joke[0].id,
-                  "joke": @joke[0].joke,
+                  "id": @joke[(params[:id].to_i) -1].id,
+                  "joke": @joke[(params[:id].to_i) -1].joke,
                   "categories": []
                 }
               }
+              puts joke
+              # puts @joke
         render json: joke
       end
 
