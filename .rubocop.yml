@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 120
