@@ -70,20 +70,22 @@ React
 
 ## Screenshots
 
-To be inserted when the program is finished.
+Before you click 'Load joke'
+<img width="244" alt="screenshot 2019-02-11 at 12 03 48" src="https://user-images.githubusercontent.com/41509062/52562265-e7296d00-2df5-11e9-8453-50427a4614ec.png">
+
+Loading joke
+<img width="154" alt="screenshot 2019-02-11 at 12 04 08" src="https://user-images.githubusercontent.com/41509062/52562266-e7c20380-2df5-11e9-9929-b9a079791f27.png">
+
+Clicking 'Load joke' loads a joke at random.
+<img width="622" alt="screenshot 2019-02-11 at 12 04 25" src="https://user-images.githubusercontent.com/41509062/52562267-e7c20380-2df5-11e9-8364-0f6a7b6ed4bb.png">
+
+<img width="490" alt="screenshot 2019-02-11 at 12 06 43" src="https://user-images.githubusercontent.com/41509062/52562268-e7c20380-2df5-11e9-98ad-4cdc35fbe928.png">
+
 
 ## Contributing
 
 To contribute towards this program, please fork this repo, make any alterations you see fit and submit a pull request. We will do our best to review them promptly.
 
-## Versioning
-
-1.0.0
-
 ## Authors
 
 Daniel Stephenson - https://github.com/djstephenson7
-
-## License
-
-This product is licensed.
